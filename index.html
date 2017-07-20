@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#dd{
+				width: 100px;
+				height: 100px;
+				background: red;
+				border-radius: 50%;
+				position: absolute;
+				bottom: 10px;
+			}
+			#shi{
+				font-size: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="dd"></div>
+		<div id="shi"></div>
+	</body>
+</html>
+<script>
+/*//构造函数
+	function aa(na,co){
+		this.name=na;
+		this.color=co
+	}
+	var b1=new aa("帅帅","屎黄色")
+	var b2=new aa("超超","星期天色")
+	console.log(b1)
+	console.log(b1 instanceof aa)*/
+	
+//prototype
+	/*function aa(na,co){
+		this.name=na;
+		this.color=co;
+	}
+	aa.prototype.type="动物";
+	aa.prototype.eat=function(){
+		console.log("吃屎")
+	};
+	var b1=new aa("帅帅","屎黄色");
+	var b2=new aa("超超","星期天色");
+	console.log(b1.type);
+	b1.eat();*/
+	
+//继承
+	/*function dong(){
+		this.species="动物发过火"
+	}
+	function can(nan,coc){
+		dong.apply(this,arguments)
+		this.name=nan
+		this.color=coc
+	}
+	var ss=new can("帅帅","红暖色")
+	console.log(ss.species)*/
+	
+//prototype继承
+	/*function dong(){
+		this.species="动物"
+	}
+	function can(nan,coc){
+		this.name=nan
+		this.color=coc
+	}
+	can.prototype=new dong()
+	can.prototype.constructor=can
+	var ss=new can("帅帅","水电费")
+	console.log(ss.species)*/
+	
+//直接继承
+	/*function dong(){}
+	function can(){}
+	dong.prototype.spe="说的"
+	can.prototype=dong.prototype
+	can.prototype.constructor=can
+	var ss=new can("帅帅","多个")
+	console.log(ss.spe)*/
+ 
+ //回调函数
+/*    var a=0
+    var dd=document.getElementById("dd")
+    var shi=document.getElementById("shi")*/
+ 	//第一种计时器
+ 	/*function shi(){
+ 		a++
+ 		dd.style.left=a+"px"
+ 	}
+ 	setInterval(shi,10)*/
+ 	
+ 	//第二种计时器
+ 	/*setInterval(function shi(){
+ 		a++
+ 		dd.style.left=a+"px"
+ 	},10)*/
+ 	
+ //时间	
+ 	/*setInterval(function(){
+ 		shi.innerHTML=new Date().toLocaleString()
+ 	},1000)*/
+ 	
+ 	
+ //闭包(闭包当中引用的变量无法释放)
+	//函数当中定义函数
+	/*function a(){
+		var c=0
+		function b(){
+			return c++
+		}
+		return b
+	}
+	var b=a()
+	console.log(b())
+	console.log(b())
+	console.log(b())
+	console.log(b())
+	console.log(b())
+	console.log(b())*/
+	
+	//一个匿名函数立即执行
+	/*(function aa(window){
+		var b=0
+		window.aa=function(){
+			return b++
+		}
+	})(window)
+	console.log(aa())
+	console.log(aa())
+	console.log(aa())
+	console.log(aa())
+	console.log(aa())*/
+	
+//综合案列
+	
+	
+	
+	
+ 	
+ 	
+ 	
+ 	
+ 
+ 
+	
+	
+	
+	
+	
+	
+	
+</script>
